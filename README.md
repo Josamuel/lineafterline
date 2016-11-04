@@ -9,11 +9,14 @@ Welcome to Line After Line, a place where the stories never go how you expect! P
 - Mongo
 - Socket.io
 
-##Features not yet implemented
-- Use Socket to display to the user how many turns they still have to wait.
-- Allow users to create private stories that only their friends can join.
-- Invite your friends from Facebook.
-- Share stories on Facebook.
+##Features implemented by Brittany Artimez, Stephen Bolton, Michael Lefkowitz, and Joey Steinberger
+- Implemented multiple sockets so more than one story could occur at once.  
+- Allowed users to add more than one line to a story for variety.
+- Created a profile page that shows a user what stories they contributed to and the stories they created
+- Added a voting system and leaderboard page so user's could see who created the highest rated stories.
+- Built a feature that allows user's to share favorite stories on Facebook.
+- Updated lobby component to toggle between stories in progress and completed stories.
+- Added a 'Piratize' feature that converts user's text into 'pirate talk'.  
 
 #Starting It Up
 
@@ -56,8 +59,20 @@ mongo
 ```
 The you can type `show dbs` to see all your databases. Then type `use line4line`.
 
-##Webpack
+##Webpack && Server
 ```
-npm run webpack
+npm run build:watch
 ```
-Running  `npm run webpack` will create a bundle in the `dist` folder. This folder is what gets served to the web browser. Unfortunately, you will have to run this command every time you update a React component then restart your Express server with `npm start`. Webpack does come with a dev-server that you can run with `npm run dev`. The webpack dev server quickly rebundles for you every time you save an edit. However, this dev server runs on port 8080 and will give you CORS errors when you try to login with Facebook. There is a way to get the Express server and webpack dev server to play together but we did not figure it out.
+```
+npm run start:dev
+```
+
+typing `npm run build:watch` will fire up webpack and it will automatically rebundle when you save files you're editing.
+typing `npm run start: dev` will fire up the server and it will automatically restart when you save files you're editing.
+
+Look into the package.json file for other scripts you can run.  
+
+##Contributors
+
+This project was worked on by Brittany Artimez, Stephen Bolton, Michael Lefkowitz, and Joey Steinberger.  We inherted the project from Charlie Person, Phil Mok, Darion Freeman, and Jason Barnet. 
+
